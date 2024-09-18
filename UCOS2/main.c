@@ -103,7 +103,7 @@ int main(void)
 	lcd_draw_char('O');
 	lcd_draw_char('S');
 	timer_init(0,65,4,625,0);
-	OSTaskCreate(TestTask,NULL,&stk[sizeof(stk)-1],0);
-	//OSTaskCreate(TaskShell,NULL,&stk2[sizeof(stk)-1],1);
+	//OSTaskCreate(TestTask,NULL,&stk[sizeof(stk)-1],0);
+	OSTaskCreate(TaskShell,NULL,&stk2[sizeof(stk)-1],1);
 	OSStart();
 }
